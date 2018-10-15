@@ -11,22 +11,35 @@ GPIO.setwarnings(False)
 while 1:
     input = serMod.get_serial()
     if input == "2":
-        print("Going Left")
-        #print(objSense.check(_LEFT))
-        motCont.go_left(1)
+        min_distance = objSense.check(_LEFT)
+		# Perhaps do a Serial println Here??
+		if min_distance == 0 || min_distance > 200:
+			print("Going Left")
+			motCont.go_left(1)
+		else:
+			print("Can't Move")
     elif input == "1":
-        print("Going Forward")
-        #print(objSense.check(_FORWARD))
-        motCont.go_forward(1)
+        min_distance = objSense.check(_FORWARD)
+		if min_distance == 0 || min_distance > 200:
+			print("Going Forward")
+			motCont.go_forward(1)
+		else:
+			print("Can't Move");
     elif input == "3":
-        print("Going Right")
-        #print(objSense.check(_RIGHT))
-        motCont.go_right(1)
+        min_distance = objSense.check(_RIGHT)
+		if min_distance == 0 || min_distance > 200:
+			print("Going Right")
+			motCont.go_right(1)
+		else:
+			print("Can't Move")
+	# No Sensors on the Back, is this really a good idea??
     elif input == "4":
-        print("Going Backward")
-        #print(objSense.check(_BACKWARD))
-        motCont.go_backward(2)
+        min_distance = objSense.check(_BACKWARD))
+		if min_distance == 0 || min_distance > 200:
+			print("Going Backward")
+			motCont.go_backward(2)
+		else:
+			print("Cant Move")
     else:
         print("Stopping")
-        #print(objSense.check(_STOP))
         motCont.stop()

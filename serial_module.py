@@ -16,3 +16,6 @@ def get_serial():
 	ser.close()
     #print x
     return x
+	
+def send_serial():
+	return
