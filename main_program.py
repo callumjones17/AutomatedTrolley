@@ -13,21 +13,21 @@ while 1:
     if input == "2":
         min_distance = objSense.check(_LEFT)
 		# Perhaps do a Serial println Here??
-		if min_distance == 0 || min_distance > 200:
+		if min_distance == 0 or min_distance > 200:
 			print("Going Left")
 			motCont.go_left(1)
 		else:
 			print("Can't Move")
     elif input == "1":
         min_distance = objSense.check(_FORWARD)
-		if min_distance == 0 || min_distance > 200:
+		if min_distance == 0 or min_distance > 200:
 			print("Going Forward")
 			motCont.go_forward(1)
 		else:
 			print("Can't Move");
     elif input == "3":
         min_distance = objSense.check(_RIGHT)
-		if min_distance == 0 || min_distance > 200:
+		if min_distance == 0 or min_distance > 200:
 			print("Going Right")
 			motCont.go_right(1)
 		else:
@@ -35,7 +35,7 @@ while 1:
 	# No Sensors on the Back, is this really a good idea??
     elif input == "4":
         min_distance = objSense.check(_BACKWARD))
-		if min_distance == 0 || min_distance > 200:
+		if min_distance == 0 or min_distance > 200:
 			print("Going Backward")
 			motCont.go_backward(2)
 		else:
