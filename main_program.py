@@ -13,6 +13,7 @@ while 1:
     if input == "2":
         min_distance = objSense.check(_LEFT)
 		# Perhaps do a Serial println Here??
+		#serMod.send_serial(min_distance)
 		if min_distance == 0 or min_distance > 200:
 			print("Going Left")
 			motCont.go_left(1)
