@@ -79,7 +79,7 @@ def go_backward():
 	#mot_right.start(0)
 	GPIO.output(mot_left_dir,GPIO.HIGH)
 	GPIO.output(mot_right_dir,GPIO.LOW)
-	mot_left.ChangeDutyCylce(80)
+	mot_left.ChangeDutyCycle(80)
 	mot_right.ChangeDutyCycle(40)
 	time.sleep(mot_delay_time)
 	mot_left.ChangeDutyCycle(0)
