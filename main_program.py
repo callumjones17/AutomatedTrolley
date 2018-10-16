@@ -107,14 +107,14 @@ while 1:
 		go_forward()
 		#else:
 		print("Can't Move");
-	elif input_data == 3":
+	elif input_data == "3":
 		#min_distance = objSense.check(_RIGHT)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Right")
 		go_right()
 		#else:
 		print("Can't Move")
-	elif input_data == 4":
+	elif input_data == "4":
 		#min_distance = objSense.check(_BACKWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Backward")
