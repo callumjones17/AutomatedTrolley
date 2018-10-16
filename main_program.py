@@ -51,7 +51,7 @@ def go_left():
 	#mot_right.start(0)
 	GPIO.output(mot_left_dir,GPIO.LOW)
 	GPIO.output(mot_right_dir,GPIO.LOW)
-	mot_left.ChangeDutyCylce(40)
+	mot_left.ChangeDutyCycle(40)
 	mot_right.ChangeDutyCycle(40)
 	time.sleep(mot_delay_time)
 	mot_left.ChangeDutyCycle(0)
