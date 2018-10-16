@@ -14,7 +14,6 @@ def get_serial():
         timeout=1)
 	x=ser.readline()
 	ser.close()
-    #print x
     return x
 	
 # def send_serial(data):
