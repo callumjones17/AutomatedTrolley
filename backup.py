@@ -91,30 +91,30 @@ def go_backward():
 
 #Main Loop
 while 1:
-	input_data = serMod.get_serial()
-	#input_data = raw_input("Direction: ")
-	if input_data == "2":
+	#input = serMod.get_serial()
+	input_data = raw_input("Direction: ")
+	if input_data == "left":#"2":
 		#min_distance = objSense.check(_LEFT)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Left")
 		go_left()
 		#else:
 		print("Can't Move")
-	elif input_data == "1":
+	elif input_data == "forward":#"1":
 		#min_distance = objSense.check(_FORWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Forward")
 		go_forward()
 		#else:
 		print("Can't Move");
-	elif input_data == 3":
+	elif input_data == "right":#3":
 		#min_distance = objSense.check(_RIGHT)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Right")
 		go_right()
 		#else:
 		print("Can't Move")
-	elif input_data == 4":
+	elif input_data == "backward":#4":
 		#min_distance = objSense.check(_BACKWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Backward")
