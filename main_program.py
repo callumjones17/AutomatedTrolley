@@ -120,6 +120,6 @@ while 1:
 		motCont.go_backward(2)
 		#else:
 		print("Cant Move")
-    else:
-        print("Stopping")
-        motCont.stop()
+	else:
+		print("Stopping")
+		motCont.stop()
