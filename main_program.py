@@ -91,7 +91,7 @@ def go_backward():
 #Main Loop
 while 1:
 	#input = serMod.get_serial()
-	input_data = input("Direction: ")
+	input_data = raw_input("Direction: ")
 	if input_data == "left":#"2":
 		#min_distance = objSense.check(_LEFT)
 		#if min_distance == 0 or min_distance > max_us_distance:
