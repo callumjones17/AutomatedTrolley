@@ -12,7 +12,7 @@ mot_left_dir = 15
 mot_right_dir = 14
 
 GPIO.setwarnings(False)
-IO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(mot_left_pwm,GPIO.OUT)
 GPIO.setup(mot_right_pwm,GPIO.OUT)
