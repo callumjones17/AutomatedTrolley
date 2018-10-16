@@ -11,13 +11,13 @@ mot_right_pwm = 23
 mot_left_dir = 15
 mot_right_dir = 14
 
-IO.setwarnings(False)
+GPIO.setwarnings(False)
 IO.setmode(GPIO.BCM)
 
-IO.setup(mot_left_pwm,GPIO.OUT)
-IO.setup(mot_right_pwm,GPIO.OUT)
-IO.setup(mot_left_dir,GPIO.OUT)
-IO.setup(mot_right_dir,GPIO.OUT)
+GPIO.setup(mot_left_pwm,GPIO.OUT)
+GPIO.setup(mot_right_pwm,GPIO.OUT)
+GPIO.setup(mot_left_dir,GPIO.OUT)
+GPIO.setup(mot_right_dir,GPIO.OUT)
 
 GPIO.output(mot_left_dir,GPIO.LOW)
 GPIO.output(mot_right_dir,GPIO.LOW)
