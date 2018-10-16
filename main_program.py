@@ -96,30 +96,29 @@ while 1:
 		#min_distance = objSense.check(_LEFT)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Left")
-		motCont.go_left(1)
+		go_left(1)
 		#else:
 		print("Can't Move")
 	elif input_data == "forward":#"1":
 		#min_distance = objSense.check(_FORWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Forward")
-		motCont.go_forward(1)
+		go_forward(1)
 		#else:
 		print("Can't Move");
 	elif input_data == "right":#3":
 		#min_distance = objSense.check(_RIGHT)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Right")
-		motCont.go_right(1)
+		go_right(1)
 		#else:
 		print("Can't Move")
 	elif input_data == "backward":#4":
 		#min_distance = objSense.check(_BACKWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Backward")
-		motCont.go_backward(2)
+		go_backward(2)
 		#else:
 		print("Cant Move")
 	else:
 		print("Stopping")
-		motCont.stop()
