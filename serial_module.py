@@ -17,15 +17,15 @@ def get_serial():
     #print x
     return x
 	
-def send_serial(data):
-    ser = serial.Serial(
-    port='/dev/ttyS0',
-    #port='/dev/rfcomm0',
-    baudrate = 9600,
-    parity=serial.PARITY_NONE,
-    stopbits=serial.STOPBITS_ONE,
-    bytesize=serial.EIGHTBITS,
-    timeout=1)
-    ser.write(data)
-    ser.close()
-    return
+# def send_serial(data):
+    # ser = serial.Serial(
+    # port='/dev/ttyS0',
+    # #port='/dev/rfcomm0',
+    # baudrate = 9600,
+    # parity=serial.PARITY_NONE,
+    # stopbits=serial.STOPBITS_ONE,
+    # bytesize=serial.EIGHTBITS,
+    # timeout=1)
+    # ser.write(data)
+    # ser.close()
+    # return

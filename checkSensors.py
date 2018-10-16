@@ -19,7 +19,7 @@ NUM_US_SENSORS = 8
 
 left_sensors = ["0000","0001","0010"]
 front_sensors = ["0011","0101"]
-right_sensors = ["0110","0111","1000"]
+right_sensors = ["0110"]#,"0111","1000"]
 
 
 def check_right():
