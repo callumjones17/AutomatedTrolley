@@ -26,7 +26,7 @@ mot_left = GPIO.PWM(mot_left_pwm,500)
 mot_right = GPIO.PWM(mot_right_pwm,500)
 
 mot_left.start(0)
-mot.right.start(0)
+mot_right.start(0)
 
 mot_delay_time = 1.8
 
