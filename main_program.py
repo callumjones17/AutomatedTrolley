@@ -115,12 +115,12 @@ while 1:
 			print("Can't Move")
 	# No Sensors on the Back, is this really a good idea??
     elif input == "backward":#4":
-			#min_distance = objSense.check(_BACKWARD)
+		#min_distance = objSense.check(_BACKWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
-			print("Going Backward")
-			motCont.go_backward(2)
+		print("Going Backward")
+		motCont.go_backward(2)
 		#else:
-			print("Cant Move")
+		print("Cant Move")
     else:
         print("Stopping")
         motCont.stop()
