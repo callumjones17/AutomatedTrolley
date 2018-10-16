@@ -25,16 +25,16 @@ GPIO.output(mot_right_dir,GPIO.LOW)
 mot_left = GPIO.PWM(mot_left_pwm,500)
 mot_right = GPIO.PWM(mot_right_pwm,500)
 
-#mot_left.start(0)
-#mot_right.start(0)
+mot_left.start(0)
+mot_right.start(0)
 
 mot_delay_time = 1.8
 
 max_us_distance = 45
 
 def go_forward():
-	mot_left.start(0)
-	mot_right.start(0)
+	#mot_left.start(0)
+	#mot_right.start(0)
 	GPIO.output(mot_left_dir,GPIO.LOW)
 	GPIO.output(mot_right_dir,GPIO.HIGH)
 	mot_left.ChangeDutyCycle(40)
@@ -42,13 +42,13 @@ def go_forward():
 	time.sleep(mot_delay_time)
 	mot_left.ChangeDutyCycle(0)
 	mot_right.ChangeDutyCycle(0)
-	mot_left.stop()
-	mot_right.stop()
+	#mot_left.stop()
+	#mot_right.stop()
 	return
 
 def go_left():
-	mot_left.start(0)
-	mot_right.start(0)
+	#mot_left.start(0)
+	#mot_right.start(0)
 	GPIO.output(mot_left_dir,GPIO.LOW)
 	GPIO.output(mot_right_dir,GPIO.LOW)
 	mot_left.ChangeDutyCylce(40)
@@ -56,13 +56,13 @@ def go_left():
 	time.sleep(mot_delay_time)
 	mot_left.ChangeDutyCycle(0)
 	mot_right.ChangeDutyCycle(0)
-	mot_left.stop()
-	mot_right.stop()
+	#mot_left.stop()
+	#mot_right.stop()
 	return
 
 def go_right():
-	mot_left.start(0)
-	mot_right.start(0)
+	#mot_left.start(0)
+	#mot_right.start(0)
 	GPIO.output(mot_left_dir,GPIO.HIGH)
 	GPIO.output(mot_right_dir,GPIO.HIGH)
 	mot_left.ChangeDutyCylce(40)
@@ -70,13 +70,13 @@ def go_right():
 	time.sleep(mot_delay_time)
 	mot_left.ChangeDutyCycle(0)
 	mot_right.ChangeDutyCycle(0)
-	mot_left.stop()
-	mot_right.stop()
+	#mot_left.stop()
+	#mot_right.stop()
 	return
 
 def go_backward():
-	mot_left.start(0)
-	mot_right.start(0)
+	#mot_left.start(0)
+	#mot_right.start(0)
 	GPIO.output(mot_left_dir,GPIO.HIGH)
 	GPIO.output(mot_right_dir,GPIO.LOW)
 	mot_left.ChangeDutyCylce(40)
@@ -84,28 +84,29 @@ def go_backward():
 	time.sleep(mot_delay_time)
 	mot_left.ChangeDutyCycle(0)
 	mot_right.ChangeDutyCycle(0)
-	mot_left.stop()
-	mot_right.stop()
+	#mot_left.stop()
+	#mot_right.stop()
 	return
 
 #Main Loop
 while 1:
-    input = serMod.get_serial()
-    if input == "2":
+    #input = serMod.get_serial()
+	input_data = input("Direction: ")
+    if input == "left":#"2":
 		#min_distance = objSense.check(_LEFT)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Left")
 		motCont.go_left(1)
 		#else:
 		print("Can't Move")
-    elif input == "1":
+    elif input == "forward":#"1":
 		#min_distance = objSense.check(_FORWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
 		print("Going Forward")
 		motCont.go_forward(1)
 		#else:
 		print("Can't Move");
-    elif input == "3":
+    elif input == "right":#3":
 			#min_distance = objSense.check(_RIGHT)
 		#if min_distance == 0 or min_distance > max_us_distance:
 			print("Going Right")
@@ -113,7 +114,7 @@ while 1:
 		#else:
 			print("Can't Move")
 	# No Sensors on the Back, is this really a good idea??
-    elif input == "4":
+    elif input == "backward":#4":
 			#min_distance = objSense.check(_BACKWARD)
 		#if min_distance == 0 or min_distance > max_us_distance:
 			print("Going Backward")
