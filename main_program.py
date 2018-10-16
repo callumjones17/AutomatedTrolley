@@ -35,58 +35,58 @@ max_us_distance = 45
 def go_forward():
 	mot_left.start(0)
 	mot_right.start(0)
-    GPIO.output(mot_left_dir,GPIO.LOW)
-    GPIO.output(mot_right_dir,GPIO.HIGH)
-    mot_left.ChangeDutyCycle(40)
-    mot_right.ChangeDutyCycle(40)
-    time.sleep(mot_delay_time)
-    mot_left.ChangeDutyCycle(0)
-    mot_right.ChangeDutyCycle(0)
+	GPIO.output(mot_left_dir,GPIO.LOW)
+	GPIO.output(mot_right_dir,GPIO.HIGH)
+	mot_left.ChangeDutyCycle(40)
+	mot_right.ChangeDutyCycle(40)
+	time.sleep(mot_delay_time)
+	mot_left.ChangeDutyCycle(0)
+	mot_right.ChangeDutyCycle(0)
 	mot_left.stop()
 	mot_right.stop()
-    return
+	return
 
 def go_left():
 	mot_left.start(0)
 	mot_right.start(0)
-    GPIO.output(mot_left_dir,GPIO.LOW)
-    GPIO.output(mot_right_dir,GPIO.LOW)
-    mot_left.ChangeDutyCylce(40)
-    mot_right.ChangeDutyCycle(40)
-    time.sleep(mot_delay_time)
-    mot_left.ChangeDutyCycle(0)
-    mot_right.ChangeDutyCycle(0)
+	GPIO.output(mot_left_dir,GPIO.LOW)
+	GPIO.output(mot_right_dir,GPIO.LOW)
+	mot_left.ChangeDutyCylce(40)
+	mot_right.ChangeDutyCycle(40)
+	time.sleep(mot_delay_time)
+	mot_left.ChangeDutyCycle(0)
+	mot_right.ChangeDutyCycle(0)
 	mot_left.stop()
 	mot_right.stop()
-    return
+	return
 
 def go_right():
-	#mot_left.start(0)
-	#mot_right.start(0)
-    GPIO.output(mot_left_dir,GPIO.HIGH)
-    GPIO.output(mot_right_dir,GPIO.HIGH)
-    mot_left.ChangeDutyCylce(40)
-    mot_right.ChangeDutyCycle(40)
-    time.sleep(mot_delay_time)
-    mot_left.ChangeDutyCycle(0)
-    mot_right.ChangeDutyCycle(0)
+	mot_left.start(0)
+	mot_right.start(0)
+	GPIO.output(mot_left_dir,GPIO.HIGH)
+	GPIO.output(mot_right_dir,GPIO.HIGH)
+	mot_left.ChangeDutyCylce(40)
+	mot_right.ChangeDutyCycle(40)
+	time.sleep(mot_delay_time)
+	mot_left.ChangeDutyCycle(0)
+	mot_right.ChangeDutyCycle(0)
 	mot_left.stop()
 	mot_right.stop()
-    return
+	return
 
 def go_backward():
 	mot_left.start(0)
 	mot_right.start(0)
-    GPIO.output(mot_left_dir,GPIO.HIGH)
-    GPIO.output(mot_right_dir,GPIO.LOW)
-    mot_left.ChangeDutyCylce(40)
-    mot_right.ChangeDutyCycle(40)
-    time.sleep(mot_delay_time)
-    mot_left.ChangeDutyCycle(0)
-    mot_right.ChangeDutyCycle(0)
+	GPIO.output(mot_left_dir,GPIO.HIGH)
+	GPIO.output(mot_right_dir,GPIO.LOW)
+	mot_left.ChangeDutyCylce(40)
+	mot_right.ChangeDutyCycle(40)
+	time.sleep(mot_delay_time)
+	mot_left.ChangeDutyCycle(0)
+	mot_right.ChangeDutyCycle(0)
 	mot_left.stop()
 	mot_right.stop()
-    return
+	return
 
 #Main Loop
 while 1:
