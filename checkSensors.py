@@ -30,7 +30,7 @@ def check_right():
 		if distance < min_distance:
 			min_distance = distance
 		time.sleep(0.01)
-return min_distance
+	return min_distance
 
 def check_left():
 	min_distance = 0
@@ -40,7 +40,7 @@ def check_left():
 		if distance < min_distance:
 			min_distance = distance
 		time.sleep(0.01)
-return min_distance
+	return min_distance
 
 def check_front():
 	min_distance = 0
@@ -50,7 +50,7 @@ def check_front():
 		if distance < min_distance:
 			min_distance = distance
 		time.sleep(0.01)
-return min_distance
+	return min_distance
 
 def check_back():
     return 0

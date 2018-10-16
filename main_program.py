@@ -2,7 +2,7 @@
 #Other files.
 import serial_module as serMod
 from DEFs import _LEFT, _RIGHT, _BACKWARD, _FORWARD, _STOP
-import checkSensors as objSense
+#import checkSensors as objSense
 import RPi.GPIO as GPIO
 import time
 
