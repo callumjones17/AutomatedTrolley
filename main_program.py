@@ -6,10 +6,10 @@ from DEFs import _LEFT, _RIGHT, _BACKWARD, _FORWARD, _STOP
 import RPi.GPIO as GPIO
 import time
 
-mot_left_pwm = 24
-mot_right_pwm = 23
-mot_left_dir = 15
-mot_right_dir = 14
+mot_left_pwm = 13
+mot_right_pwm = 18
+mot_left_dir = 24
+mot_right_dir = 23
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -65,7 +65,7 @@ def go_right():
 	#mot_right.start(0)
 	GPIO.output(mot_left_dir,GPIO.HIGH)
 	GPIO.output(mot_right_dir,GPIO.HIGH)
-	mot_left.ChangeDutyCylce(40)
+	mot_left.ChangeDutyCycle(40)
 	mot_right.ChangeDutyCycle(40)
 	time.sleep(mot_delay_time)
 	mot_left.ChangeDutyCycle(0)
